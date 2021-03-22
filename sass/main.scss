@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+// Set your brand colors
+// $azul-oscuro: #06325b;
+// $brown: #757763;
+// $beige-light: #bfb5a1;
+// $beige-lighter: #b2a68f;
+
+// Update Bulma's global variables
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$grey-lighter: #f3f4f5;
+// $primary: $azul-oscuro;
+$link: #2081b8;
+
+// Update some of Bulma's component variables
+$body-background-color: white;
+$body-family: "Montserrat", sans-serif;
+$family-secondary: "Poppins", sans-serif;
+$text-strong: inherit;
+$title-color: inherit;
+$subtitle-color: inherit;
+$title-weight: 700;
+$subtitle-weight: 700;
+$body-size: 17px;
+$body-color: #111;
+
+// Import only what you need from Bulma
+@import "../bulma/bulma.sass";
+
+.is-size-0 {
+	font-size: 4rem;
+}
+
+.is-size-00 {
+	font-size: 5rem;
+}
+
+.has-text-weight-bolder {
+	font-weight: 800;
+}
+
+.p-7 {
+	padding: 6rem;
+}
+
+.separator {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+.navbar {
+	width: 100%;
+}
+
+.margarita img {
+	max-width: 888px;
+	margin-top: -5rem;
+	position: relative;
+	z-index: -1;
+}
+
+.margarita2 img {
+	max-width: 848px;
+	margin-top: -1rem;
+	position: relative;
+	z-index: -1;
+}
+
+.banner-historia {
+	background: url(../img/banner-historia.jpg) center top / cover;
+}
+
+.banner-hablemos {
+	background: url(../img/banner-hablemos.jpg) center top / cover;
+}
+.banner-metodo {
+	background: url(../img/banner-metodo.jpg) center center / cover;
+}
+.banner-middle {
+	background: url(../img/banner-middle.jpg) center center / cover;
+}
+.banner-middle2 {
+	background: url(../img/banner-middle2.jpg) center center / cover;
+}
+
+.col_right {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.mapa {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.gmap {
+	position: relative;
+	top: -30%;
+	z-index: 1;
+}
+
+.is-borded {
+	border: 1px solid $link;
+}
+
+.has-text-white .navbar-item {
+	color: white;
+}
+
+a.navbar-item.is-active {
+	color: $link;
+}
+
+.testimonios {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+
+.testi {
+	width: 100%;
+}
+
+.flickity-page-dots {
+	display: none;
+}
+
+.flickity-button {
+	color: $grey !important;
+}
+
+.legal {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.navbar-burger {
+    color: #555;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.navbar-burger span {
+  height: 2px;
+  width: 18px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar-brand {
+    margin-top: -4.5rem;
+  }
+
+  .has-text-white .navbar-item {
+    color: #4a4a4a;
+  }
+
+	.margarita img,
+	.margarita2 img {
+		margin-top: 0;
+	}
+
+  .columns {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+	.hero-head .has-background-grey-lighter {
+		background-color: transparent !important;
+	}
+
+	.banner-historia {
+		background: url(../img/banner-historia.jpg) 30% top / cover;
+	}
+
+	.banner-hablemos {
+		background: url(../img/banner-hablemos.jpg) 60% top / cover;
+	}
+
+	.banner-metodo {
+		background: url(../img/banner-metodo.jpg) center center / cover;
+	}
+
+	.col_right {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+  .hero-head .pt-6 {
+    padding-top: 1rem !important;
+  }
+
+	.hero-body .px-6 {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.hero-body .pr-6, .hero-head .pr-6 {
+		padding-right: 0.75rem !important;
+	}
+
+	.hero-body .pl-6 {
+		padding-left: 0rem !important;
+	}
+
+	.hero-body .p-6 {
+		padding: 2rem 0.75rem !important;
+	}
+
+	.legal {
+		flex-direction: column;
+	}
+
+	.bloque-2cols .p-6 {
+		padding: 0.75rem !important;
+	}
+
+	.testimonios {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+    font-size: .9rem;
+	}
+
+	.flickity-prev-next-button.previous {
+		left: 0 !important;
+	}
+	.flickity-prev-next-button.next {
+		right: 0 !important;
+	}
+
+  .level-item {
+    margin-bottom: 1.5rem;
+  }
+}
