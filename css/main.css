@@ -10135,7 +10135,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-size-00 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 
 .has-text-weight-bolder {
@@ -10156,17 +10156,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .margarita img {
-  max-width: 888px;
-  margin-top: -5rem;
+  max-width: 800px;
+  margin-top: -1rem;
   position: relative;
   z-index: -1;
 }
 
 .margarita2 img {
-  max-width: 848px;
-  margin-top: -1rem;
-  position: relative;
-  z-index: -1;
+  max-width: 800px;
 }
 
 .banner-historia {
@@ -10191,7 +10188,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .col_right {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
   height: 100%;
