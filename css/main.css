@@ -10166,6 +10166,17 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   max-width: 800px;
 }
 
+.margarita3 img {
+  max-width: 662px;
+}
+
+.brand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .banner-historia {
   background: url(../img/banner-historia.jpg) center top/cover;
 }
@@ -10184,6 +10195,22 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .banner-middle2 {
   background: url(../img/banner-middle2.jpg) center center/cover;
+}
+
+.banner-gracias {
+  background: url(../img/banner-gracias.jpg) center center/cover;
+}
+
+.banner-call {
+  background: url(../img/banner-call.jpg) center center/cover;
+}
+
+.banner-micro {
+  background: url(../img/banner-micro.jpg) center center/cover;
+}
+
+.banner-land {
+  background: url(../img/banner-land.jpg) center top/cover;
 }
 
 .col_right {
@@ -10254,9 +10281,24 @@ a.navbar-item.is-active {
   width: 18px;
 }
 
+.modal-content {
+  border-radius: 6px;
+}
+
+.cuadro {
+  width: 90%;
+  height: 450px;
+  margin: auto;
+}
+
 @media screen and (max-width: 768px) {
   .navbar-brand {
     margin-top: -4.5rem;
+  }
+
+  .container.is-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .has-text-white .navbar-item {
@@ -10298,12 +10340,13 @@ a.navbar-item.is-active {
     padding-top: 1rem !important;
   }
 
-  .hero-body .px-6 {
+  .hero-body .px-6:not(.button) {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  .hero-body .pr-6, .hero-head .pr-6 {
+  .hero-body .pr-6,
+.hero-head .pr-6 {
     padding-right: 0.75rem !important;
   }
 
@@ -10339,5 +10382,38 @@ a.navbar-item.is-active {
 
   .level-item {
     margin-bottom: 1.5rem;
+  }
+
+  .banner-gracias {
+    background: url(../img/banner-gracias.jpg) 65% center/cover;
+  }
+
+  .brand {
+    position: static;
+  }
+
+  .landing .hero-body,
+.llamada .hero-body,
+.micro .hero-body {
+    padding: 2rem 0.75rem;
+  }
+
+  .landing .hero-body .column.is-6 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .landing .iconos .column.px-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .landing .margarita .column:first-child {
+    padding: 2rem 1rem;
+  }
+
+  .button_micro {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
