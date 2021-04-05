@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Cancelamos tu deuda en Canarias - Hablemos</title>
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/purecookie.css">
+		<script src="js/purecookie.js"></script>
 
 		<script type="text/javascript">
 			(function (e, t, o, n, p, r, i) {
@@ -101,21 +103,21 @@
 		</section>
 
 		<section class="section p-0">
-			<div class="columns has-text-centered m-0 is-vcentered">
+			<div class="columns m-0 is-vcentered">
 				<div class="column is-6 has-background-link has-text-white py-6">
 					<div class="columns is-centered">
 						<div class="column is-5">
 							<p class="my-5">&nbsp;</p>
 
-							<h2 class="title mb-6"><strong>Formulario de registro de datos</strong></h2>
+							<h2 class="title mb-6 has-text-centered"><strong>Formulario de contacto</strong></h2>
 
-							<form action="">
+							<form action="" id="contacto">
 								<div class="field">
 									<div class="control">
 										<input
 											class="input is-white has-background-link is-radiusless"
-											type="text"
-											placeholder="Nombre"
+											type="text" name="nombre"
+											placeholder="Nombre y apellidos"
 										/>
 									</div>
 								</div>
@@ -124,7 +126,7 @@
 									<div class="control">
 										<input
 											class="input is-white has-background-link is-radiusless"
-											type="text"
+											type="text" name="ciudad"
 											placeholder="Población"
 										/>
 									</div>
@@ -134,7 +136,7 @@
 									<div class="control">
 										<input
 											class="input is-white has-background-link is-radiusless"
-											type="email"
+											type="email" name="email"
 											placeholder="Email"
 										/>
 									</div>
@@ -144,7 +146,7 @@
 									<div class="control">
 										<input
 											class="input is-white has-background-link is-radiusless"
-											type="tel"
+											type="tel" name="telf"
 											placeholder="Teléfono"
 										/>
 									</div>
@@ -154,11 +156,11 @@
 									<div class="control">
 										<textarea
 											class="textarea is-white has-background-link is-radiusless"
-											placeholder="Mensaje"
+											placeholder="Mensaje" name="msj"
 										></textarea>
 									</div>
 								</div>
-
+								
 								<div class="field">
 									<div class="control">
 										<button class="button is-white is-fullwidth is-radiusless">
@@ -166,6 +168,17 @@
 										</button>
 									</div>
 								</div>
+
+								<div class="field">
+									<div class="control">
+										<input type="checkbox" name="chkpoli" class="checkbox" required> 
+										<small>
+											He leído y acepto la <a href="./politica-privacidad.html" target="_blank" class="has-text-white"><u>Política de Privacidad</u></a> y acepto el uso de mis datos para la gestión del registro de usuario, de la relación comercial y ejecución del contrato, en su caso.
+										</small>
+									</div>
+								</div>
+
+								<div id="msj" class="notification is-success is-hidden is-light is-size-7"></div>
 							</form>
 
 							<p class="my-5">&nbsp;</p>
@@ -250,5 +263,41 @@
 		</footer>
 
 		<script src="js/menu.js"></script>
+		<script>
+			const contacto = document.querySelector("#contacto");
+			const msj = document.querySelector("#msj");
+
+			addEventListener("load", cargaBotones);
+
+			function cargaBotones() {
+
+				contacto.addEventListener("submit",(e)=>{
+					e.preventDefault();
+					let data = new FormData(contacto);
+					fetch('./mail.php',{
+						method: 'POST',
+						body: data
+					})
+					.then(response=> {
+						if(response.ok) 
+							return response.text();
+						 else 
+							throw "Error en llamada Fetch";
+					})
+					.then(data => {
+						if(data == 'success'){
+							msj.innerHTML = 'Su mensaje ha sido enviado correctamente, nos pondremos en contacto con usted en menos de 24 horas.';
+							msj.classList.remove('is-hidden');
+							setTimeout(()=>{
+								msj.classList.add('is-hidden');
+							},6000)
+						} else {
+							msj.innerHTML = 'Hubo un error';
+						}
+					})
+				})
+			}
+		</script>
+		
 	</body>
 </html>
