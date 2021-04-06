@@ -1,5 +1,5 @@
 // --- Config --- //
-var purecookieTitle = "Cookies."; // Title
+var purecookieTitle = "Cookies"; // Title
 var purecookieDesc = `<p>Margarita Ramos Topham utiliza cookies propias y de terceros para fines estrictamente funcionales, permitiendo la navegación en la web, así como para fines analíticos, para mostrarte publicidad (tanto general como personalizada) en base a un perfil elaborado a partir de tu hábitos de navegación (p. ej. páginas visitadas), para optimizar la web y para poder valorar las opiniones de los servicios adquiridos por los usuarios.</p>
 
 <p>Para administrar o deshabilitar estas cookies haz clic en <a href="#" id="txtcookie">Configuración de Cookies</a>. Puedes obtener más información en nuestra <a href="./politica-cookies.html" target="_blank">Política de Cookies.</a></p>
@@ -36,6 +36,7 @@ function pureFadeIn(elem, display){
     }
   })();
 };
+
 function pureFadeOut(elem){
   var el = document.getElementById(elem);
   el.style.opacity = 1;
@@ -58,6 +59,7 @@ function setCookie(name,value,days) {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -86,16 +88,17 @@ function purecookieDismiss() {
   pureFadeOut("configCookies");
 }
 
-window.onload = function() { 
-  cookieConsent(); 
-  const txtcookie = document.querySelector("#txtcookie");
-  const cerrarconfig = document.querySelector("#cerrarconfig")
 
-  txtcookie.addEventListener("click",()=>{
+cookieConsent();
+const txtcookie = document.querySelector("#txtcookie");
+const cerrarconfig = document.querySelector("#cerrarconfig");
+
+if (txtcookie != null && cerrarconfig != null) {
+  txtcookie.addEventListener("click", () => {
     pureFadeIn("configCookies");
-  })
+  });
 
-  cerrarconfig.addEventListener("click",()=>{
+  cerrarconfig.addEventListener("click", () => {
     pureFadeOut("configCookies");
-  })
-};
+  });
+}

@@ -1,14 +1,14 @@
 <?php
 if ($_POST) {
-    $to = "info@cancelamostudeudaencanarias.com";// 
+    $to = "mramos@iustitia.es";// 
     $subject = 'Contacto Web';
     $nombre = $_POST['nombre'];
     $ciudad = $_POST['ciudad'];
     $email = $_POST['email'];
     $telf = $_POST['telf'];
     $msj = $_POST['msj'];
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $message = "
         <p>El siguiente contacto ha solicitado más información a través de la web:<p>
         

@@ -1,5 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+
+	var flkty = new Flickity(".testimonios", {
+		contain: true,
+		wrapAround: true,
+		autoPlay: 3000,
+	});
+	
 	// Get all "navbar-burger" elements
 	const $navbarBurgers = Array.prototype.slice.call(
 		document.querySelectorAll(".navbar-burger"),
