@@ -162,7 +162,9 @@ a.navbar-item.is-active {
 
 .legal {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	line-height: 2;
+	// justify-content: space-between;
 }
 
 .navbar-burger {
