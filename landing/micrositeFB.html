@@ -7,6 +7,25 @@
 		<title>Microsite</title>
 		<link rel="stylesheet" href="../css/main.css" />
 
+		<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '267198628406312');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
 		<!-- codigo de CRM -->
 
 		<script type="text/javascript">
@@ -34,14 +53,12 @@
 			vgo("setTrackByDefault", true);
 
 			vgo("process");
-			
 		</script>
 
 		<!-- Event snippet for Website lead conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-577368126/E5Q1CMCyi_YBEL7gp5MC'});
-</script>
-
+		<script>
+			gtag("event", "conversion", { send_to: "AW-577368126/E5Q1CMCyi_YBEL7gp5MC" });
+		</script>
 
 		<!-- Global site tag (gtag.js) - Google Ads: 577368126 -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-577368126"></script>
@@ -65,11 +82,20 @@
 
 							<p>&nbsp;</p>
 
-							<div class="cuadro has-background-danger mb-6"></div>
+							<div class="my-6">
+								<iframe
+									src="https://player.vimeo.com/video/538285983"
+									width="100%"
+									height="360"
+									frameborder="0"
+									allow="autoplay; fullscreen; picture-in-picture"
+									allowfullscreen
+								></iframe>
+							</div>
 
 							<a
 								href="./llamada.html"
-								class="button button_micro is-link is-medium is-size-6-mobile is-radiusless is-family-secondary px-6"
+								class="button button_micro is-link is-medium is-size-6-mobile is-radiusless is-family-secondary px-6 is-hidden"
 							>
 								<strong>Quiero una consulta gratuita</strong>
 							</a>
@@ -84,5 +110,13 @@
 				<figure><img src="../img/brand.png" alt="" /></figure>
 			</div>
 		</footer>
+
+		<script>
+			const boton = document.querySelector(".button_micro");
+
+			setTimeout(() => {
+				boton.classList.remove("is-hidden");
+			}, 350000);
+		</script>
 	</body>
 </html>

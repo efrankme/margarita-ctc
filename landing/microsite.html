@@ -65,11 +65,13 @@
 
 							<p>&nbsp;</p>
 
-							<div class="cuadro has-background-danger mb-6"></div>
+							<div class="my-6">
+								<iframe src="https://player.vimeo.com/video/538285983" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							</div>
 
 							<a
 								href="./llamada.html"
-								class="button button_micro is-link is-medium is-size-6-mobile is-radiusless is-family-secondary px-6"
+								class="button button_micro is-link is-medium is-size-6-mobile is-radiusless is-family-secondary px-6 is-hidden"
 							>
 								<strong>Quiero una consulta gratuita</strong>
 							</a>
@@ -84,5 +86,13 @@
 				<figure><img src="../img/brand.png" alt="" /></figure>
 			</div>
 		</footer>
+
+		<script>
+			const boton  = document.querySelector(".button_micro");
+
+			setTimeout(()=>{
+				boton.classList.remove("is-hidden");
+			}, 350000)
+		</script>
 	</body>
 </html>

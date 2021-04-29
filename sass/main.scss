@@ -189,6 +189,11 @@ a.navbar-item.is-active {
 	margin: auto;
 }
 
+
+.bordes {
+  border: 1px dotted;
+}
+
 @media screen and (max-width: 768px) {
 	.navbar-brand {
 		margin-top: -4.5rem;
