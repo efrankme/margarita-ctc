@@ -31,6 +31,10 @@ $body-color: #111;
 // Import only what you need from Bulma
 @import "../bulma/bulma.sass";
 
+html {
+	scroll-behavior: smooth;
+}
+
 .is-size-0 {
 	font-size: 4rem;
 }
@@ -162,9 +166,9 @@ a.navbar-item.is-active {
 
 .legal {
 	display: flex;
-	flex-direction: column;
+	// flex-direction: column;
 	line-height: 2;
-	// justify-content: space-between;
+	justify-content: space-between;
 }
 
 .navbar-burger {

@@ -110,10 +110,10 @@ src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
 								</p>
 
 								<a
-									href="#"
+									href="#forma"
 									class="button is-link is-large is-size-5-mobile is-radiusless mt-5"
 								>
-									<strong>Descubre cómo lo hacemos</strong>
+									<strong>Quiero una consulta gratuita</strong>
 								</a>
 							</div>
 						</div>
@@ -122,7 +122,7 @@ src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
 			</div>
 		</section>
 
-		<section class="section p-0">
+		<section class="section p-0" id="forma">
 			<div class="columns m-0 is-vcentered">
 				<div class="column is-6 has-background-link has-text-white py-6">
 					<div class="columns is-centered">
@@ -205,9 +205,8 @@ src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
 										<input type="checkbox" name="chkpoli" class="checkbox" required />
 										<small>
 											He leído y acepto la
-											<a
-												href="./politica-privacidad.html"
-												target="_blank"
+											<a id="texto-poli"
+												href="#"
 												class="has-text-white"
 											>
 												<u>Política de Privacidad</u>
@@ -291,20 +290,37 @@ src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
 		</section>
 
 		<footer class="section is-medium pb-6">
-			<div class="container has-text-centered is-max-desktop">
+			<div class="container has-text-centered">
 				<figure><img src="img/brand.png" alt="" /></figure>
-
 				<p class="my-6">&nbsp;</p>
-
 				<div class="legal">
 					<a href="aviso-legal.html">Aviso legal</a>
 					<a href="condiciones-uso.html">Condiciones de uso</a>
 					<a href="politica-privacidad.html">Política de privacidad</a>
 					<a href="politica-cookies.html">Política de cookies</a>
 					<a href="contratacion.html">Condiciones de contratación</a>
+					<a href="proteccion-datos.html">Protección de datos</a>
 				</div>
 			</div>
 		</footer>
+
+
+			<!-- Modal Politica -->
+
+		<div id="politica" class="modal">
+			<div class="modal-background cerrar_pol"></div>
+			<div class="modal-content p-5 has-background-white">
+				<div class="content">					
+
+					<p>De conformidad con lo dispuesto en la normativa vigente de Protección de Datos, le informamos que los datos que nos facilite serán incorporados a un fichero del que es responsable <b>MARGARITA RAMOS TOPHAM</b>  con NIF: <b>78485479A</b>, cuya finalidad es gestionar el registro del usuario, la relación comercial y ejecución del contrato, en su caso, con la legitimación del consentimiento del interesado. No <b>se cederán datos a terceros salvo obligación legal</b> y colaboraciones con <b>MARGARITA RAMOS TOPHAM</b>  y podrá ejercitar los derechos de acceder, rectificar y suprimir los datos, así como otros derechos, como se explica en la información adicional. Los datos proceden del <b>propio interesado</b>. Puede consultar la información adicional y detallada sobre protección de datos clicando en el <a href="politica-privacidad.html">siguiente enlace.</a> </p>
+					
+				</div>
+			</div>
+			<button
+				class="modal-close is-large cerrar_pol"
+				aria-label="close"
+			></button>
+		</div>
 
 		<script src="js/script.js"></script>
 		<script>
@@ -338,7 +354,30 @@ src="https://www.facebook.com/tr?id=267198628406312&ev=PageView&noscript=1"
 							}
 						});
 				});
+
+
+				let texto_poli = document.querySelector("#texto-poli");
+				texto_poli.addEventListener("click", function () {
+					// newsletter.classList.remove("is-active");
+					// newsletter.classList.remove("is-clipped");
+					politica.classList.add("is-active");
+					politica.classList.add("is-clipped");
+				});
+			
+
+				let cierrespol = document.querySelectorAll(".cerrar_pol");
+				cierrespol.forEach((boton) => {
+					boton.addEventListener("click", function () {
+						politica.classList.remove("is-active");
+						politica.classList.remove("is-clipped");
+					});
+				});
 			}
+
+
+
+
+				
 		</script>
 	</body>
 </html>
